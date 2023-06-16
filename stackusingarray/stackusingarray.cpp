@@ -52,5 +52,40 @@ public:
 };
 
 int main() {
-
+	stackarray s;
+	char ch;
+	while (true) {
+		cout << endl;
+		cout << "\n***Stack Menu***\n";
+		cout << "1. Push\n" << endl;;
+		cout << "2. Pop\n" << endl;
+		cout << "3. Display\n" << endl;
+		cout << "4. Exit\n" << endl;
+		cout << "\nEnter your choice: ";
+		cin >> ch;
+		switch (ch) {
+		case '1': {
+			int element;
+			cout << "\nenter an element :";
+			cin >> element;
+			s.push(element);
+			break;
+		}
+		case '2':
+			if (s.empty()) {
+				cout << "\nStack is Empty." << endl;
+				break;
+			}
+			s.pop();
+			break;
+		case '3':
+			s.display();
+			break;
+		case '4':
+			return 0;
+		default:
+			cout << "\nInvalid choice" << endl;
+			break;
+		}
+	}
 }
