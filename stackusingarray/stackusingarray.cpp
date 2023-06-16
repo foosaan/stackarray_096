@@ -35,5 +35,9 @@ public:
 	}
 
 	//method for check if data empty
-	
+	bool empty() {
+		return (top == -1);
+	}
+
+
 };
