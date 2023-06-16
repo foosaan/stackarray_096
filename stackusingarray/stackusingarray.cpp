@@ -41,7 +41,7 @@ public:
 
 	void display() {
 		if (empty()) {
-
+			cout << "\nstack is empty" << endl;
 		}
 	}
 };
